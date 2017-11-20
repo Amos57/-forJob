@@ -62,20 +62,29 @@ public class Create {
 
 		if(x.length==6){
 		int[][] ar= {{x[0],x[1]},{x[2],x[3]}};
-	    int[] result={x[4],x[5]};
-	          array=ar;
-	     this.lastColumn=result;
+	        int[] result={x[4],x[5]};  
+	        int[][] allM= {{x[0],x[1],x[4]},
+ 	                       {x[2],x[3],x[5]}};
+                
+             array=ar;
+	this.lastColumn=result;
+             allMatrix=allM;
 	     resultTwo();
+			
    }else if(x.length==12){
 	   
 	   
 	   int[][] ar= {{x[0],x[1],x[2]},{x[3],x[4],x[5]},{x[6],x[7],x[8]}};
 	   int[] result={x[9],x[10],x[11]};
-	          array=ar;
-	     this.lastColumn=result;
+	   int[][] allM= {{x[0],x[1],x[2],x[9]},
+	    	            {x[3],x[4],x[5],x[10]},
+                        {x[6],x[7],x[8],x[11]} };
+
+             allMatrix=allM;
+	     array=ar;
+	this.lastColumn=result;
 	     resultThree();
-	     
-	     
+			
    }else if(x.length==20){
 	   
    
@@ -84,17 +93,17 @@ public class Create {
 	              ,{x[8],x[9],x[10],x[11]},
 	              {x[12],x[13],x[14],x[15]}};
 	   int[] result={x[16],x[17],x[18],x[19]};
-		      array=ar;
-		      
-		   int[][] allM={{x[0],x[1],x[2],x[3],x[16]}
+           int[][] allM={{x[0],x[1],x[2],x[3],x[16]}
                         ,{x[4],x[5],x[6],x[7],x[17]}
                         ,{x[8],x[9],x[10],x[11],x[18]}
                         ,{x[12],x[13],x[14],x[15],x[19]}};
-		      allMatrix=allM;
-           
-	     this.lastColumn=result;
+			
+             allMatrix=allM;
+             array=ar;
+	 this.lastColumn=result;
 	     resultFour();
-   }else{
+			
+     }else{
 	  JOptionPane.showMessageDialog(null, MESSAGE_ERRORE); 
 	  
 	  System.exit(0);
